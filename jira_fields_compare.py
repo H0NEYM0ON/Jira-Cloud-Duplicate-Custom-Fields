@@ -13,13 +13,13 @@ import requests
 # -----------------------------------------------------------------------------
 # User-configurable defaults (fill these to avoid passing flags/env)
 # -----------------------------------------------------------------------------
-DEFAULT_SITE1_URL = "https://norstella.atlassian.net"
-DEFAULT_EMAIL1 = "prashant.sultania@norstella.com"
-DEFAULT_TOKEN1 = "ATATT3xFfGF0Q_683onZ7lobj9RU9A0XO5vOhW7nb0VInnwwdipC8QRMELFeOG3hKxybivsPoO4XWLVav5UmfgpCj1nxxezH-_b8YocO4N6mqb2CkjqdfR1nsaSU4iUWQgn82xBB9MoLWNGU-7i_7ozRgxeC4KGbpIrW4wpAyFDQaL33bCOMyzM=0842432F"
+DEFAULT_SITE1_URL = "https://site1.atlassian.net"
+DEFAULT_EMAIL1 = "site1.email@example.com"
+DEFAULT_TOKEN1 = "site1.api.token"
 
-DEFAULT_SITE2_URL = "https://evaluateltd.atlassian.net"
-DEFAULT_EMAIL2 = "prashant.sultania@norstella.com"
-DEFAULT_TOKEN2 = "ATATT3xFfGF0Q_683onZ7lobj9RU9A0XO5vOhW7nb0VInnwwdipC8QRMELFeOG3hKxybivsPoO4XWLVav5UmfgpCj1nxxezH-_b8YocO4N6mqb2CkjqdfR1nsaSU4iUWQgn82xBB9MoLWNGU-7i_7ozRgxeC4KGbpIrW4wpAyFDQaL33bCOMyzM=0842432F"
+DEFAULT_SITE2_URL = "https://site2.atlassian.net"
+DEFAULT_EMAIL2 = "site2.email@example.com"
+DEFAULT_TOKEN2 = "site2.api.token"
 
 # If non-empty, used when --output-dir is not specified
 DEFAULT_OUTPUT_DIR = ""
