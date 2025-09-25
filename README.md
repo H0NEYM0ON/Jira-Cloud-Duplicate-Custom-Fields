@@ -1,7 +1,7 @@
 
 <div align="center"><img width="141" height="164" alt="Jira_attribution_center_light" src="https://github.com/user-attachments/assets/817dc1da-8c48-46dd-a61f-b9e01ccfc1ce" /></div>
 
-# Jira custom fields fetch and compare
+# Jira Cloud custom fields fetch and compare
 
 This tool fetches active (not trashed/inactive) custom fields from two Jira Cloud sites, writes one CSV per site, and creates a comparison CSV by field name.
 
@@ -138,6 +138,7 @@ python -m pip --version
 - The script uses `/rest/api/3/field/search` when available, falling back to `/rest/api/3/field`.
 - Only custom fields are included. Known trash/inactive flags are filtered defensively if present.
 - Rate limits (HTTP 429) are handled with retry.
+
 
 
 
